@@ -82,5 +82,32 @@ namespace FISCAapp.WEB.Controllers
             var listaPlanEstudio = _aplicacionDb.PlanEstudios.ToList();
             return View(listaPlanEstudio);
         }
+
+        //KENYI
+        public IActionResult Asignacion()
+        {
+            var listaAsignacion = _aplicacionDb.asignaciones.ToList();
+            return View(listaAsignacion);
+        }
+        public IActionResult Asignatura()
+        {
+            var listaAsignatura = _aplicacionDb.asignaturas.ToList();
+            return View(listaAsignatura);
+        }
+        public IActionResult Carrera()
+        {
+            var listaCarrera = _aplicacionDb.carreras.ToList();
+            return View(listaCarrera);
+        }
+        public IActionResult Cuatrimestre()
+        {
+            var listaCuatrimestre = _aplicacionDb.cuatrimestres.ToList();
+            return View(listaCuatrimestre);
+        }
+        public IActionResult Docente()
+        {
+            var listaDocente = _aplicacionDb.docentes.ToList();
+            return View(listaDocente);
+        }
     }
 }

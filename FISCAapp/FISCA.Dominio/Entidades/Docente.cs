@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+<<<<<<< HEAD
 using System.ComponentModel.DataAnnotations.Schema;
+=======
+>>>>>>> 41ab709e84eb9b653c1f1d1d60f2ec54779318e1
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
@@ -10,6 +13,7 @@ namespace FISCA.Dominio.Entidades
 {
     public class Docente
     {
+<<<<<<< HEAD
         [Key]
         public int IdDocente { get; set; }
 
@@ -46,5 +50,17 @@ namespace FISCA.Dominio.Entidades
 
         [StringLength(100)]
         public string Foto { get; set; }
+=======
+        [Key] public int IdDocente { get; set; }
+        public string? NombresDocente { get; set; }
+        public string? ApellidosDocente { get; set; }
+        public string? CedulaDocente { get; set; }
+        public string? CorreoDocente { get; set; }
+        public string? CelularDocente { get; set; }
+        public string? TelefonoDocente { get; set; }
+        public string? DireccionDocente { get; set; }
+        public int Estado { get; set; }
+        public string? Foto { get; set; }
+>>>>>>> 41ab709e84eb9b653c1f1d1d60f2ec54779318e1
     }
 }

@@ -31,6 +31,7 @@ namespace FISCA.Infraestructura.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdAsignacion"));
 
                     b.Property<string>("Descripcion")
+<<<<<<< HEAD
                         .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
@@ -39,6 +40,12 @@ namespace FISCA.Infraestructura.Migrations
                         .IsRequired()
                         .HasMaxLength(11)
                         .HasColumnType("nvarchar(11)");
+=======
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Estado")
+                        .HasColumnType("nvarchar(max)");
+>>>>>>> 41ab709e84eb9b653c1f1d1d60f2ec54779318e1
 
                     b.Property<int>("IdAsignatura")
                         .HasColumnType("int");
@@ -66,7 +73,11 @@ namespace FISCA.Infraestructura.Migrations
                         new
                         {
                             IdAsignacion = 1,
+<<<<<<< HEAD
                             Descripcion = "Asignación 1",
+=======
+                            Descripcion = "Waos",
+>>>>>>> 41ab709e84eb9b653c1f1d1d60f2ec54779318e1
                             Estado = "Activo",
                             IdAsignatura = 1,
                             IdDocente = 1,
@@ -74,6 +85,7 @@ namespace FISCA.Infraestructura.Migrations
                             IdHorario = 1,
                             IdTurno = 1,
                             NumeroAsignacion = 1
+<<<<<<< HEAD
                         },
                         new
                         {
@@ -86,6 +98,8 @@ namespace FISCA.Infraestructura.Migrations
                             IdHorario = 2,
                             IdTurno = 2,
                             NumeroAsignacion = 2
+=======
+>>>>>>> 41ab709e84eb9b653c1f1d1d60f2ec54779318e1
                         });
                 });
 
@@ -107,9 +121,13 @@ namespace FISCA.Infraestructura.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("NombreAsignatura")
+<<<<<<< HEAD
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
+=======
+                        .HasColumnType("nvarchar(max)");
+>>>>>>> 41ab709e84eb9b653c1f1d1d60f2ec54779318e1
 
                     b.HasKey("IdAsignatura");
 
@@ -122,6 +140,7 @@ namespace FISCA.Infraestructura.Migrations
                             IdCarrera = 1,
                             IdCuatrimestre = 1,
                             IdGrupo = 1,
+<<<<<<< HEAD
                             NombreAsignatura = "Matemáticas"
                         },
                         new
@@ -131,6 +150,9 @@ namespace FISCA.Infraestructura.Migrations
                             IdCuatrimestre = 2,
                             IdGrupo = 2,
                             NombreAsignatura = "Física"
+=======
+                            NombreAsignatura = "Analisis Matematico"
+>>>>>>> 41ab709e84eb9b653c1f1d1d60f2ec54779318e1
                         });
                 });
 
@@ -143,7 +165,10 @@ namespace FISCA.Infraestructura.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdCarrera"));
 
                     b.Property<string>("NombreCarrera")
+<<<<<<< HEAD
                         .IsRequired()
+=======
+>>>>>>> 41ab709e84eb9b653c1f1d1d60f2ec54779318e1
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("IdCarrera");
@@ -154,12 +179,16 @@ namespace FISCA.Infraestructura.Migrations
                         new
                         {
                             IdCarrera = 1,
+<<<<<<< HEAD
                             NombreCarrera = "Ingeniería Informática"
                         },
                         new
                         {
                             IdCarrera = 2,
                             NombreCarrera = "Ingeniería Civil"
+=======
+                            NombreCarrera = "Waza"
+>>>>>>> 41ab709e84eb9b653c1f1d1d60f2ec54779318e1
                         });
                 });
 
@@ -172,7 +201,10 @@ namespace FISCA.Infraestructura.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdCuatrimestre"));
 
                     b.Property<string>("NombreCuatrimestre")
+<<<<<<< HEAD
                         .IsRequired()
+=======
+>>>>>>> 41ab709e84eb9b653c1f1d1d60f2ec54779318e1
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("IdCuatrimestre");
@@ -183,12 +215,16 @@ namespace FISCA.Infraestructura.Migrations
                         new
                         {
                             IdCuatrimestre = 1,
+<<<<<<< HEAD
                             NombreCuatrimestre = "Primer Cuatrimestre 2024"
                         },
                         new
                         {
                             IdCuatrimestre = 2,
                             NombreCuatrimestre = "Segundo Cuatrimestre 2024"
+=======
+                            NombreCuatrimestre = "Pruebita"
+>>>>>>> 41ab709e84eb9b653c1f1d1d60f2ec54779318e1
                         });
                 });
 
@@ -201,6 +237,7 @@ namespace FISCA.Infraestructura.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdDocente"));
 
                     b.Property<string>("ApellidosDocente")
+<<<<<<< HEAD
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
@@ -224,11 +261,27 @@ namespace FISCA.Infraestructura.Migrations
                         .IsRequired()
                         .HasMaxLength(250)
                         .HasColumnType("nvarchar(250)");
+=======
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CedulaDocente")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CelularDocente")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CorreoDocente")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("DireccionDocente")
+                        .HasColumnType("nvarchar(max)");
+>>>>>>> 41ab709e84eb9b653c1f1d1d60f2ec54779318e1
 
                     b.Property<int>("Estado")
                         .HasColumnType("int");
 
                     b.Property<string>("Foto")
+<<<<<<< HEAD
                         .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
@@ -242,6 +295,15 @@ namespace FISCA.Infraestructura.Migrations
                         .IsRequired()
                         .HasMaxLength(8)
                         .HasColumnType("nvarchar(8)");
+=======
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NombresDocente")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TelefonoDocente")
+                        .HasColumnType("nvarchar(max)");
+>>>>>>> 41ab709e84eb9b653c1f1d1d60f2ec54779318e1
 
                     b.HasKey("IdDocente");
 
@@ -251,6 +313,7 @@ namespace FISCA.Infraestructura.Migrations
                         new
                         {
                             IdDocente = 1,
+<<<<<<< HEAD
                             ApellidosDocente = "Pérez",
                             CedulaDocente = "1234567890123456",
                             CelularDocente = "87654321",
@@ -566,6 +629,17 @@ namespace FISCA.Infraestructura.Migrations
                         {
                             IdHorario = 2,
                             NombreHorario = "Horario Vespertino"
+=======
+                            ApellidosDocente = "Gimenez Garcilazo",
+                            CedulaDocente = "72546978",
+                            CelularDocente = "978456123",
+                            CorreoDocente = "pedro@upla.edu.pe",
+                            DireccionDocente = "Psje. Chifuentes",
+                            Estado = 1,
+                            Foto = "",
+                            NombresDocente = "Pedro",
+                            TelefonoDocente = "064526"
+>>>>>>> 41ab709e84eb9b653c1f1d1d60f2ec54779318e1
                         });
                 });
 
